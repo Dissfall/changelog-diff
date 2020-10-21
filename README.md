@@ -1,4 +1,4 @@
-# chagngelog-diff
+# changelog-diff
 
 [![build status](https://img.shields.io/travis/com/dissfall/chagngelog-diff.svg)](https://travis-ci.com/dissfall/chagngelog-diff)
 [![code coverage](https://img.shields.io/codecov/c/github/dissfall/chagngelog-diff.svg)](https://codecov.io/gh/dissfall/chagngelog-diff)

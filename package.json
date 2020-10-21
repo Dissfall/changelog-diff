@@ -1,7 +1,7 @@
 {
   "name": "changelog-diff",
   "description": "Generate changelog from difference of changelog files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "George Lukyanov <dmail@eml.cc> ()",
   "ava": {
     "extensions": [
@@ -15,7 +15,7 @@
     "changelog": "./index.js"
   },
   "bugs": {
-    "url": "https://github.com/dissfall/chagngelog-diff/issues",
+    "url": "https://github.com/dissfall/changelog-diff/issues",
     "email": "dmail@eml.cc"
   },
   "contributors": [
@@ -52,7 +52,7 @@
   "engines": {
     "node": ">= 10"
   },
-  "homepage": "https://github.com/dissfall/chagngelog-diff",
+  "homepage": "https://github.com/dissfall/changelog-diff",
   "keywords": [
     "changelog",
     "diff",
@@ -63,7 +63,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dissfall/chagngelog-diff"
+    "url": "https://github.com/dissfall/changelog-diff"
   },
   "scripts": {
     "build": "rollup -c",
