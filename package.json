@@ -1,0 +1,94 @@
+{
+  "name": "changelog-diff",
+  "description": "Generate changelog from difference of changelog files",
+  "version": "1.0.0",
+  "author": "George Lukyanov <dmail@eml.cc> ()",
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "bin": {
+    "changelog": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/dissfall/chagngelog-diff/issues",
+    "email": "dmail@eml.cc"
+  },
+  "contributors": [
+    "George Lukyanov <dmail@eml.cc> ()"
+  ],
+  "dependencies": {
+    "diff": "^4.0.2",
+    "util": "^0.12.3",
+    "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@types/diff": "^4.0.2",
+    "@types/yargs": "^15.0.9",
+    "ava": "latest",
+    "codecov": "latest",
+    "cross-env": "latest",
+    "eslint": "latest",
+    "eslint-config-xo-lass": "latest",
+    "fixpack": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "nyc": "latest",
+    "remark-cli": "latest",
+    "remark-preset-github": "latest",
+    "rollup": "^2.32.0",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "ts-node": "^9.0.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^4.0.3",
+    "xo": "latest"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "homepage": "https://github.com/dissfall/chagngelog-diff",
+  "keywords": [
+    "changelog",
+    "diff",
+    "difference",
+    "generate"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dissfall/chagngelog-diff"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "npm run lint:ts && npm run lint:md",
+    "lint:md": "remark . -qfo",
+    "lint:ts": "xo --fix",
+    "pretest": "npm run lint",
+    "test": "cross-env NODE_ENV=test ava",
+    "test-coverage": "cross-env NODE_ENV=test nyc npm run test"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extends": [
+      "xo-lass"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "unicorn/no-reduce": 0
+    },
+    "ignore": [
+      "./index.js"
+    ]
+  }
+}
