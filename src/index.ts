@@ -122,7 +122,12 @@ function generateChangelog(
     },
     ''
   );
-  return `New in ${version}\n${changelist}`;
+  return `Release ${version}\n${changelist} ${getDate()}`;
+}
+
+function getDate() {
+  const date = new Date();
+  return `${date.toDateString()} ${date.toTimeString().split(' ')[0]}`;
 }
 
 export default getChangelogDiff;
